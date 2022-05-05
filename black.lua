@@ -21,21 +21,19 @@ local Aimlock, MousePressed, CanNotify = true, false, false;
 local AimlockTarget;
 getgenv().RideHubUniversalAimbotLoaded = true
 
-getgenv().SeparateNotify = function(title, text, icon, time) 
+getgenv().SeparateNotify = function(title, text, time) 
     SGui:SetCore("SendNotification",{
         Title = title;
         Text = text;
-        Icon = "rbxassetid://454748065";
         Duration = time;
     })
 end
 
 
-getgenv().SeparateNotify = function(title, text, icon, time) 
+getgenv().SeparateNotify = function(title, text, time) 
     SGui:SetCore("SendNotification",{
         Title = title;
         Text = text;
-        Icon = "rbxassetid://454748065";
         Duration = time;
     })
    end
