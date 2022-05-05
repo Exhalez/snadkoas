@@ -5,7 +5,7 @@ getgenv().AimRadius = 50 -- How far away from someones character you want to loc
 getgenv().ThirdPerson = false -- Locking onto someone in your Third Person POV
 getgenv().FirstPerson = true -- Locking onto someone in your First Person POV
 getgenv().TeamCheck = false -- Check if Target is on your Team (True means it wont lock onto your teamates, false is vice versa) (Set it to false if there are no teams)
-getgenv().PredictMovement = true -- Predicts if they are moving in fast velocity (like jumping) so the aimbot will go a bit faster to match their speed 
+getgenv().PredictMovement = false -- Predicts if they are moving in fast velocity (like jumping) so the aimbot will go a bit faster to match their speed 
 getgenv().PredictionVelocity = 10 -- The speed of the PredictMovement feature 
 ]]--
 
