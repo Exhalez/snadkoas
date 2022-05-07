@@ -11,7 +11,7 @@ getgenv().PredictionVelocity = 10 -- The speed of the PredictMovement feature
 
 getgenv().UniversalAimbotLoadingTime = tick()
 if UniversalAimbotLoaded == true then
-    Notify("RideHub", "Script Loaded Already", "", 3)
+    Notify("SussyHub", "Script Loaded Already", "", 3)
     return 
 end
 
@@ -25,7 +25,7 @@ getgenv().SeparateNotify = function(title, text, icon, time)
     SGui:SetCore("SendNotification",{
         Title = title;
         Text = text;
-        Icon = "rbxassetid://8821058027";
+        Icon = "rbxassetid://7528719395";
         Duration = time;
     })
 end
@@ -36,7 +36,7 @@ getgenv().Notify = function(title, text, icon, time)
         SGui:SetCore("SendNotification",{
             Title = title;
             Text = text;
-            Icon = "rbxassetid://8821058027";
+            Icon = "rbxassetid://7528719395";
             Duration = time;
         }) 
     end
@@ -118,7 +118,7 @@ end
         if getgenv().TeamCheck == true then
             if #workspace.Teams:GetChildren() == 0 then 
                 getgenv().TeamCheck = false 
-                SeparateNotify("RideHub", "TeamCheck set to: "..tostring(getgenv().TeamCheck).." because there are no teams!", "", 3)
+                SeparateNotify("SussyHub", "TeamCheck set to: "..tostring(getgenv().TeamCheck).." because there are no teams!", "", 3)
             end
         end
     end
@@ -164,13 +164,13 @@ Uis.InputBegan:Connect(function(Key)
                 local Target;Target = GetNearestTarget()
                 if Target ~= nil then 
                     AimlockTarget = Target
-                    Notify("RideHub", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
+                    Notify("SussyHub", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
                 end
             end)
         end
         if Key.KeyCode == Enum.KeyCode[AimlockToggleKey] then 
             Aimlock = not Aimlock
-            Notify("RideHub", "Aimlock: "..tostring(Aimlock), "", 3)
+            Notify("SussyHub", "Aimlock: "..tostring(Aimlock), "", 3)
         end
     end
 end)
@@ -222,4 +222,4 @@ RService.RenderStepped:Connect(function()
     end
 end)
 
-SeparateNotify("RideHub", "Universal Aimbot loaded in: "..string.format("%.7f", tostring(tick() - UniversalAimbotLoadingTime)), "", 3)
+SeparateNotify("SussyHub", "Universal Aimbot loaded in: "..string.format("%.7f", tostring(tick() - UniversalAimbotLoadingTime)), "", 3)
