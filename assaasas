@@ -128,7 +128,13 @@ if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Ticket") the
     PlrTab:AddTextbox({
         Name = "Send 10k",
         Default = "",
-        TextDisappear = true,
+	    Callback = function(text)
+        for i,v in pairs(game.Players:GetChildren()) do
+if (string.sub(string.lower(v.Name),1,string.len(text))) == string.lower(text) then
+text = v.Name
+end
+end
+        TextDisappear = fasle,
         Callback = function(text)
             local A_1 = "10000"
             local A_2 = game.Players[text]
